@@ -14,7 +14,7 @@ from DictionaryDB import DictionaryDB
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'j-doradic lite rocks!'
-# app.config['DATASOURCE'] = 'local'
+app.config['DATASOURCE'] = 'web'
 boostrap = Bootstrap(app)
 manager = Manager(app)
 manager.add_command("runserver", Server())
