@@ -10,19 +10,19 @@ class Keyword:
 
     @property
     def keyword(self):
-        return self.__keyword
+        return self.keyword
 
     @keyword.setter
     def keyword(self, _keyword):
-        self.__keyword = _keyword
+        self.keyword = _keyword
 
     @property
     def definitions(self):
-        return self.__definitions
+        return self.definitions
 
     @definitions.setter
     def definitions(self, _defs):
-        self.__definitions = _defs
+        self.definitions = _defs
 
     @property
     def definition_number(self):
