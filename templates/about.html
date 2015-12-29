@@ -1,0 +1,33 @@
+{% extends "skeleton.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>About
+            <small>and why you will love this</small>
+        </h1>
+    </div>
+
+    <blockquote>
+        <p>love the dictionary database; hate the website</p>
+        <footer>@sdiox (the guy who created this web app)</footer>
+    </blockquote>
+
+    <p>
+        If you are Thai and need to use your Japanese language skill for some reason,
+        having a nice Thai &lt;&gt; Japanese dictionary would be very handy. Ain't it?
+    </p>
+    <p>
+        And <a href="http://www.j-doradic.com/">J-doradic</a> is the online dictionary website I frequently use because it has, probably, the biggest database of Japanese words.
+    </p>
+    <p>
+        The only problem with the website is that the website layout contains so many unnecessary elements which have nothing to do with the purpose of my use of this website.
+        Therefore, I decided to create a website that will forward a lookup request to J-doradic, parse the result, and present it to users in a clean-looking manner.
+    </p>
+
+    <br/><br/>
+
+    <p>This web app is developed using Flask framework and BeautifulSoup4.</p>
+</div>
+
+{% endblock %}

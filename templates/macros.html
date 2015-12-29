@@ -1,0 +1,5 @@
+{% macro puts(string) %}
+    {{ string }}
+{% endmacro %}
+
+{% macro onlyFirstPage(value) %}{% if value is none %}y{% else %}{{ value }}{% endif %}{% endmacro %}

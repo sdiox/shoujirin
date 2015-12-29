@@ -1,0 +1,60 @@
+{% extends "skeleton.html" %}
+
+{% block content %}
+{{ super() }}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            {% include 'search_form.html' with context %}
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default panel-info">
+                <div class="panel-heading">Look up result: {{ searchResult.definition_number }} entries</div>
+                <table class="table table-striped search-result-table">
+                    <thead>
+                        <tr>
+                            <th class="kanji">Kanji</th>
+                            <th class="readings">Reading(s)</th>
+                            <th class="partofspeech">Part of Speech</th>
+                            <th class="meanings">Meanings</th>
+                            <th class="actions text-center">More</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% if searchResult.definition_number == 0 %}
+                    <tr>
+                        <td colspan="5" class="text-center">
+                            <div class="text-danger">No results returned</div>
+                            <a href="http://jisho.org/search/{{ keyword }}" class="btn btn-default" target="_blank">
+                                <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                                try jisho.org?
+                            </a>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    {% for _def in searchResult.definitions %}
+                        <tr>
+                            <td class="kanji">{{ _def.kanji }}</td>
+                            <td class="readings">{{ _def.readings }}</td>
+                            <td class="partofspeech">{{ _def.partOfSpeech }}</td>
+                            <td class="meanings">{{ _def.meanings }}</td>
+                            <td class="actions text-center">
+                                <a class="btn btn-default" href="http://jisho.org/search/{{ _def.kanji }}" target="_blank" style="padding-left: 15px; padding-right: 20px;">
+                                    <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "skeleton.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="alert alert-danger">Error: invalid input!</div>
+    <br/>
+    <div class="row">
+        <div class="col-lg-12">
+            {% include 'search_form.html' %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
