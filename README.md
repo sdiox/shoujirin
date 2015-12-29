@@ -1,4 +1,4 @@
-# jdoradic-lite
+# Shoujirin (小辞林)
 A simple web app that basically sends request to j-doradic.com and extract the result table and present it the user in a more clean-looking manner.
 
 ![screenshot](https://github.com/sdiox/shoujirin/blob/master/readme/screenshot.png?raw=true)
