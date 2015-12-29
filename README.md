@@ -1,7 +1,7 @@
 # jdoradic-lite
 A simple web app that basically sends request to j-doradic.com and extract the result table and present it the user in a more clean-looking manner.
 
-![screenshot](https://github.com/sdiox/jdoradic-lite/blob/master/readme/screenshot.png?raw=true)
+![screenshot](https://github.com/sdiox/shoujirin/blob/master/readme/screenshot.png?raw=true)
 Why bother?
 * It is way faster to look up words on this web app because the web layout is very simple and clean.
 * You can click the link at the end of each row to look for more information on jisho.org
